@@ -9,8 +9,6 @@ import OrderReceivedEmail from '@/components/emails/OrderReceivedEmail';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
-  console.log('hello');
-
   try {
     const body = await req.text();
 
@@ -26,16 +24,12 @@ export async function POST(req: Request) {
       process.env.STRIPE_WEBHOOK_SECRET!
     );
 
-    console.log('helo>>>>>>>>>>');
-
     if (event.type === 'checkout.session.completed') {
       if (!event.data.object.customer_details?.email) {
         throw new Error('Missing user email!');
       }
 
       const session = event.data.object as Stripe.Checkout.Session;
-
-      console.log(session);
 
       const { userId, orderId } = session.metadata || {
         userId: null,
@@ -80,7 +74,7 @@ export async function POST(req: Request) {
       });
 
       await resend.emails.send({
-        from: 'CaseCobra <adityakunwar0147@gmail.com>',
+        from: 'CaseCobra <onboarding@resend.dev>',
         to: [event.data.object.customer_details.email],
         subject: 'Thanks for your order!',
         react: OrderReceivedEmail({
@@ -101,8 +95,6 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ result: event, ok: true });
   } catch (e) {
-    console.error(e);
-
     return NextResponse.json(
       { message: 'Something went wrong!', ok: false },
       { status: 500 }
