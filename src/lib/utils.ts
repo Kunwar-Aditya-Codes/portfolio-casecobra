@@ -35,6 +35,6 @@ export function constructMetadata({
       images: [{ url: image }],
     },
     icons,
-    metadataBase: new URL('https://james.com'),
+    metadataBase: new URL('https://portfolio-casecobra.vercel.app/'),
   };
 }
