@@ -33,7 +33,7 @@ const Steps = () => {
           pathname.endsWith(step.url)
         );
 
-        const imgPath = `/snake-${i + 1}.png`;
+        const imgPath = `/config-${i + 1}.png`;
 
         return (
           <li key={step.name} className='relative overflow-hidden lg:flex-1'>

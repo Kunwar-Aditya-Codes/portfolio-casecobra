@@ -15,7 +15,7 @@ const Navbar = async () => {
       <MaxWidthWrapper>
         <div className='flex h-14 items-center justify-between border-b border-zinc-200'>
           <Link href={'/'} className='flex z-40 font-semibold'>
-            case<span className='text-purple-600'>cobra</span>
+            case<span className='text-purple-600 first-letter:capitalize'>forge</span>
           </Link>
 
           <div className='flex items-center h-full space-x-4'>

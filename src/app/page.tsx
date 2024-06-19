@@ -13,8 +13,8 @@ export default function Home() {
         <MaxWidthWrapper className='pb-24 pt-10 lg:grid lg:grid-cols-3 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 xl:pt-32 lg:pb-52'>
           <div className='col-span-2 px-6 lg:px-0 lg:pt-0'>
             <div className='relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start'>
-              <div className='absolute w-28 left-0 -top-20 hidden lg:block'>
-                <img src={'/snake-1.png'} className='w-full hue-rotate-180' />
+              <div className='absolute w-[7.5rem] left-0 -top-20 hidden lg:block'>
+                <img src={'/phone-1.png'} className='w-full' />
               </div>
 
               <h1 className='relative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-7xl'>
@@ -121,9 +121,9 @@ export default function Home() {
             </h2>
 
             <img
-              src='/snake-2.png'
+              src='/phone-2.png'
               alt=''
-              className='w-24 order-0 lg:order-2'
+              className='w-12 order-0 lg:order-2'
             />
           </div>
 
