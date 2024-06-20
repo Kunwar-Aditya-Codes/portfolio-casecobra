@@ -87,7 +87,7 @@ const Thanks = () => {
         <div>
           <div className='grid grid-cols-2 gap-x-6 text-sm py-10'>
             <div>
-              <p className='font-medium text-gray-900 '>Shipping address</p>
+              <p className='font-medium text-gray-900'>Shipping address</p>
               <div className='mt-2 text-zinc-700'>
                 <address className='not-italic'>
                   <span className='block'>{shippingAddress?.name}</span>
