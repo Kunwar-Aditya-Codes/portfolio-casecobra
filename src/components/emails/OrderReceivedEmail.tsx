@@ -34,10 +34,10 @@ const OrderReceivedEmail = ({
         <Container style={container}>
           <Section style={message}>
             <Img
-              src={`${baseUrl}/snake-3.png`}
+              src={`${baseUrl}/phone-1.png`}
               width={'65'}
               height={'73'}
-              alt='delivery snake'
+              alt='delivery phone'
               style={{ margin: 'auto' }}
             />
 
@@ -66,7 +66,7 @@ const OrderReceivedEmail = ({
                 <Text style={global.paragraphWithBold}>Order Number</Text>
                 <Text style={track.number}>{orderId}</Text>
               </Column>
-              <Column style={{ marginLeft: 20 }}>
+              <Column style={{ marginLeft: 30 }}>
                 <Text style={global.paragraphWithBold}>Order Date</Text>
                 <Text style={track.number}>{orderDate}</Text>
               </Column>
